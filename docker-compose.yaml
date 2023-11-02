@@ -4,10 +4,10 @@ services:
     image: mysql:5.7
     container_name: database
     environment:
-      - MYSQL_USER=bahattin
-      - MYSQL_PASSWORD=Bahattin..11
-      - MYSQL_DATABASE=bookstore_db
-      - MYSQL_ROOT_PASSWORD=Admin123
+      MYSQL_USER: bahattin
+      MYSQL_PASSWORD: Bahattin..11
+      MYSQL_DATABASE: bookstore_db
+      MYSQL_ROOT_PASSWORD: Admin123
     networks:
       - test-database-net
   
