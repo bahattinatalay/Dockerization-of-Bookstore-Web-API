@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  database:
+    image: mysql:5.7
+    container_name: database
+    environment:
+      - MYSQL_USER=bahattin
+      - MYSQL_PASSWORD=Bahattin..11
+      - MYSQL_DATABASE=bookstore_db
+      - MYSQL_ROOT_PASSWORD=Admin123
+    networks:
+      - test-database-net
+  
+  myapp:
+    image: bahattinatalay/bookstoreapi:latest
+    container_name: myapp
+    depends_on:
+      - database
+    ports:
+      - "80:80"
+    networks:
+      - test-database-net
+
+networks:
+  test-database-net:
+
+  
+
+
